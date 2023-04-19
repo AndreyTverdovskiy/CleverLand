@@ -1,0 +1,91 @@
+.booking {
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    z-index: 9;
+
+    &_modal {
+        width: 528px;
+        background: #FFFFFF;
+        border-radius: 16px;
+        padding: 48px 56px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &_title {
+            width: 100%;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 30px;
+            letter-spacing: 0.1px;
+            color: #363636;
+            text-align: center;
+            position: relative;
+        }
+
+        &_close {
+            position: absolute;
+            cursor: pointer;
+            background: #F9F9FA;
+            border-radius: 50%;
+            padding: 15px;
+            top: -25px;
+            right: -24px;
+        }
+
+
+        &_button_submit{
+            width: 100%;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 0.2px;
+            color: #FFFFFF;
+            border: 1px solid #BFC4C9;
+            background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+            padding: 11px 23px;
+            margin: 28px 0 8px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        &_button_disable{
+            margin: 28px 0 8px;
+            width: 100%;
+            padding: 11px 23px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 150%;
+            color: #FFFFFF;
+            background: #EBEBEB;
+            border: 1px solid transparent;
+            border-radius: 30px;
+            text-transform: uppercase;
+        }
+
+        &_button_remove{
+            margin-top: 8px;
+            width: 100%;
+            padding: 11px 23px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 150%;
+            color: #363636;
+            background: #FFFFFF;
+            border: 1px solid #BFC4C9;
+            border-radius: 30px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+    }
+}

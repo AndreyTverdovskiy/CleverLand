@@ -1,0 +1,47 @@
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &_title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 0.1px;
+        margin-bottom: 32px;
+
+    }
+    &_massage {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+        color: #363636;
+        text-align: center;
+    }
+
+    .submit {
+        width: 100%;
+        cursor: pointer;
+        color: #FFFFFF;
+
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+
+        border: 1px solid #BFC4C9;
+        border-radius: 30px;
+        background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+        padding: 11px 23px;
+        margin: 28px 0 8px;
+
+    }
+
+}
+
+

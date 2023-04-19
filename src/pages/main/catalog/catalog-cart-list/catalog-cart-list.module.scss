@@ -1,0 +1,180 @@
+.book{
+    box-shadow: 0 2px 4px rgba(191, 196, 201, 0.2), 0 3px 4px rgba(191, 196, 201, 0.18), 0 1px 5px rgba(191, 196, 201, 0.24);
+    border-radius: 10px;
+    margin-left: 4px;
+
+    padding: 24px 24px 24px 16px;
+    margin-bottom: 16px;
+    cursor: pointer;
+
+    display: flex;
+    &_wrapper{
+        display: flex;
+        width: 100%;
+        .book_cover{
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            height: 170px;
+            border-radius: 3px;
+        }
+        .book_description{
+            width: 70%;
+            margin-left: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+            &_block{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .book_name{
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 32px;
+                letter-spacing: 0.1px;
+
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+
+            .book_author{
+                margin-top: 8px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                letter-spacing: 0.1px;
+                color: #727272;
+            }
+        }
+        .book_button{
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-align: center;
+
+            .book_button__free{
+                color: #FFFFFF;
+                border: 1px solid #BFC4C9;
+                background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+                padding: 11px 23px;
+                margin: 24px 0 8px;
+                border-radius: 20px;
+            }
+            .book_button__busy{
+                color: #A7A7A7;
+                border: 1px solid #BFC4C9;
+                background: #F9F9FA;
+                padding: 11px 23px;
+                margin: 24px 0 8px;
+                border-radius: 20px;
+
+                &_you{
+                    color: #363636;
+                    border: 1px solid #BFC4C9;
+                    background: #F9F9FA;
+                    padding: 11px 23px;
+                    margin: 28px 0 8px;
+                    border-radius: 20px;
+                    cursor: pointer;
+
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 18px;
+                    letter-spacing: 0.2px;
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1133px) {
+   .book{
+       &_wrapper{
+           .book_cover{
+               width: 30%;
+           }
+           .book_description{
+               width: 70%;
+           }
+           .book_button{
+
+               .book_button__free{
+                   color: #FFFFFF;
+                   border: 1px solid #BFC4C9;
+                   background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+                   padding: 11px 33px;
+                   margin: 0;
+                   border-radius: 20px;
+               }
+               .book_button__busy{
+                   color: #A7A7A7;
+                   border: 1px solid #BFC4C9;
+                   background: #F9F9FA;
+                   padding: 11px 23px;
+                   margin: 0;
+                   border-radius: 20px;
+
+               }
+           }
+       }
+   }
+}
+@media screen and (max-width: 660px)  {
+    .book{
+        margin: 0 0 16px 0;
+        padding: 16px 16px 16px 8px;
+        &_wrapper{
+            align-items: flex-start;
+            .book_cover{
+                width: 30%;
+                height: auto;
+                img{
+                    object-fit: contain;
+                }
+
+
+            }
+            .book_description{
+                margin-left: 8px;
+                width: 70%;
+                &_block{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                }
+                .book_name{
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+
+                .book_author{
+                    margin-top: 3px;
+                    font-size: 12px;
+                }
+            }
+            .book_button{
+                width: 100%;
+
+                .book_button__free{
+                    margin: 0;
+                }
+                .book_button__busy{
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

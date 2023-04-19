@@ -1,0 +1,194 @@
+.calendar {
+    margin-top: 32px;
+    width: 256px;
+    min-height: 270px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 10px -1px rgba(0, 0, 0, 0.2);
+
+    &_header {
+        position: relative;
+        border-radius: 5px 5px 0 0;
+        background-color: #FFFFFF;
+        color: #A7A7A7;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        &_block{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            &_arrow_down{
+                margin-left: 10px;
+                width: 24px;
+                height: 24px;
+                background-image: url('./assets/arrow_drop_down.svg');
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+
+            &_arrow_up{
+                margin-left: 10px;
+                width: 24px;
+                height: 24px;
+                background-image: url('./assets/arrow_drop_down.svg');
+                transform: rotate(-180deg);
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+        }
+
+        &_arrow{
+            display: flex;
+            &_up {
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+                background-image: url('./assets/arrow.svg');
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+
+            &_down {
+                margin-left: 5px;
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+                background-image: url('./assets/arrow.svg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                transform: rotate(-180deg);
+            }
+        }
+
+
+    }
+
+    &_body{
+        border-radius: 0 0 5px 5px;
+        padding: 5px;
+    }
+
+    &_week_names{
+        height: 32px;
+        font-weight: 500;
+        font-size: 12px;
+        letter-spacing: 0.2px;
+        color: #F83600;
+        text-align: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 1px 1px;
+    }
+
+    &_days{
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 400;
+        color: rgb(167, 167, 167);
+        text-align: center;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: 1fr;
+        gap: 1px 1px;
+    }
+
+    &_day{
+        border-radius: 50%;
+        padding: 8px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        //pointer-events: none;
+        //color: rgb(191, 196, 201);
+        color: rgb(167, 167, 167);
+        background-color: rgba(0, 0, 0, 0);
+
+
+        //&:hover{
+        //    border: 1px solid grey;
+        //}
+    }
+
+    &_tomorrow{
+        color: rgb(54, 54, 54);
+        pointer-events: auto;
+
+        &:hover{
+            border: 1px solid grey;
+        }
+    }
+
+    &_additional_day{
+        padding: 5.5px;
+        font-weight: 300;
+        cursor: pointer;
+        color: rgb(167, 167, 167);
+    }
+
+
+
+    &_today_item{
+        color: rgb(248, 54, 0);
+        pointer-events: auto;
+
+        &:hover{
+            border: 1px solid grey;
+        }
+    }
+
+
+
+
+    &_pick_item{
+        padding: 9px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 1px solid transparent;
+
+        &:hover{
+            border: 1px solid grey;
+        }
+
+        &_container{
+            font-weight: 400;
+            font-size: 12px;
+            color: #F83600;
+            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 1px 1px;
+        }
+    }
+
+    &_selected_item{
+        color: rgb(255, 255, 255);
+        background: linear-gradient(231.58deg, rgb(248, 54, 0) -53.35%, rgb(249, 212, 35) 297.76%);
+
+        &:hover{
+            background-color: #F83600;
+        }
+    }
+
+    &_weekend{
+        background: rgb(254, 235, 234);
+        color:  rgb(167, 167, 167);
+        pointer-events: none;
+
+        &_today {
+            color: rgb(248, 54, 0);
+        }
+    }
+
+
+}

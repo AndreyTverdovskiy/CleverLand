@@ -1,0 +1,262 @@
+.registration {
+    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+
+    .title {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: 0.1px;
+        color: #FFFFFF;
+        margin-bottom: 46px;
+    }
+
+    .commonContainer {
+        background: #FFFFFF;
+        border-radius: 16px;
+        width: 528px;
+        padding: 48px 56px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .container {
+            width: 100%;
+
+            .stepContainer {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                margin-bottom: 32px;
+
+                .register {
+                    font-size: 24px;
+                    font-weight: 700;
+                    color: #363636;
+                    line-height: 30px;
+                    margin: 0 0 8px 0;
+                }
+
+                .step {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: #363636;
+                    line-height: 18px;
+                }
+            }
+
+            .formContainer {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: normal;
+                width: 100%;
+
+                .labelContainer {
+                    position: relative;
+                    width: 100%;
+
+                    .inputCommon {
+                        position: relative;
+                        width: 100%;
+                        cursor: pointer;
+                        height: 56px;
+
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #363636;
+
+                        line-height: 18px;
+                        background: #F9F9FA;
+                        border: none;
+                        border-bottom: 1px solid #BFC4C9;
+                        padding-left: 12px;
+                        z-index: 2;
+                        outline: none;
+
+                        &:focus {
+                            z-index: 0;
+                        }
+
+                        &:focus::placeholder {
+                            color: transparent;
+                        }
+                    }
+
+                    .inputCommonError {
+                        border-bottom: 1px solid #FF5253;
+                    }
+
+                    .labelFocus {
+
+                        font-size: 12px;
+                        font-weight: 500;
+                        color: #A7A7A7;
+
+                        line-height: 16px;
+                        letter-spacing: 0.2px;
+                        position: absolute;
+                        top: 50%;
+                        background-color: transparent;
+                        transform: translateY(-26px);
+                        padding-left: 12px;
+                        z-index: 1;
+                    }
+
+                    .label {
+                        z-index: 3;
+                    }
+
+                    .eyeStyles {
+                        cursor: pointer;
+                        padding: 0;
+                        border: none;
+                        color: inherit;
+                        background-color: transparent;
+                        position: absolute;
+                        bottom: 17px;
+                        right: 16px;
+                        z-index: 4;
+                    }
+
+                    .successPassword {
+                        position: absolute;
+                        bottom: 17px;
+                        right: 40px;
+                        z-index: 4;
+                    }
+                }
+
+                .buttonSubmit {
+                    width: 100%;
+
+                    background: #FFFFFF;
+                    box-shadow: none;
+                    border: 1px solid #FFFFFF;
+
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #FFFFFF;
+
+                    line-height: 150%;
+                    letter-spacing: 0.2px;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+                    border-radius: 30px;
+                    margin-top: 32px;
+                    margin-bottom: 16px;
+                    height: 52px;
+
+                }
+
+                .buttonSubmitDisable {
+                    background: #EBEBEB;
+                }
+
+                .emptyDiv {
+                    height: 20px;
+                }
+
+                .helper {
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: #A7A7A7;
+                    line-height: 16px;
+                    letter-spacing: 0.2px;
+                    margin: 0 0 16px 12px;
+                }
+
+                .red {
+                    color: rgb(244, 44, 79)
+                }
+
+                .helperError {
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 16px;
+                    letter-spacing: 0.2px;
+                    margin: 0 0 16px 12px;
+                    color: rgb(244, 44, 79)
+                }
+
+            }
+
+            .enterContainer {
+
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+
+                .account {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #727272;
+                    line-height: 24px;
+                    letter-spacing: 0.1px;
+                    margin-right: 16px;
+                }
+
+                .arrow {
+                    display: flex;
+                    align-items: center;
+
+                    cursor: pointer;
+
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 18px;
+                    letter-spacing: 0.2px;
+                    color: #363636;
+                    text-transform: uppercase;
+
+                    img {
+                        margin-left: 15px;
+                    }
+
+                    padding: 0;
+                    border: none;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .registration {
+        justify-content: flex-start;
+        padding-top: 16px;
+
+        .title {
+            margin-bottom: 8px;
+            font-size: 18px;
+            line-height: 28px;
+        }
+
+        .commonContainer {
+            padding: 24px 16px;
+            width: 90vw;
+
+            .container {
+                .enterContainer {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+
+                }
+            }
+        }
+    }
+}
+

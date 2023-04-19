@@ -1,0 +1,36 @@
+.swiper {
+  padding: 4px;
+  height: 518px;
+  margin-top: 32px;
+  @media screen and (max-width: 1133px) {
+    height: 640px;
+  }
+}
+
+
+.swiper :global(.swiper-pagination.swiper-pagination-horizontal) {
+  opacity: 1;
+  padding: 4px;
+  bottom: -5px;
+}
+.swiper :global(.swiper-pagination-bullet-active) {
+  background: #363636;
+}
+
+.swiperWrapper {
+  margin-inline: auto;
+}
+
+.imageWrapper{
+  max-width: 174px
+}
+.book{
+  min-height: 491px;
+  max-width: 255px;
+  @media screen and (max-width: 1133px) {
+    height: 550px;
+  }
+
+}
+
+

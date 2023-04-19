@@ -1,0 +1,52 @@
+.wrapper {
+    display: flex;
+
+    .agreement {
+        width: 100%;
+        margin-left: 6px;
+
+        h1 {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: 0.1px;
+            color: #363636;
+        }
+
+        &_container {
+            ol {
+                list-style: none;
+                counter-reset: li;
+            }
+
+            li:before {
+                counter-increment: li;
+                content: counters(li, ".") ". ";
+            }
+        }
+
+        &_block {
+            margin-top: 32px;
+            letter-spacing: 0.1px;
+            color: #363636;
+
+            &_title {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+
+            }
+
+            &_subtitle {
+                margin-left: 30px;
+                margin-top: 16px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+
+

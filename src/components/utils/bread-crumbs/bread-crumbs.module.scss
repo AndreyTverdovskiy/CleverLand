@@ -1,0 +1,30 @@
+.wrapper{
+    margin: 27px 0 42px;
+    padding: 23px 0;
+    background: #F9F9FA;
+    .list{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.1px;
+        color: #A7A7A7;
+        &:not(:last-child){
+            &:after{
+                padding: 0 11px;
+                color: #BFC4C9;
+                content: "/\00a0";
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1133px) {
+    .wrapper {
+        margin: 8px 0 20px;
+        padding: 20px 16px;
+        background: #F9F9FA;
+    }
+}
+
+
+

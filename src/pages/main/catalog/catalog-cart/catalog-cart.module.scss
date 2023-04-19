@@ -1,0 +1,108 @@
+.book{
+    box-shadow: 0 2px 4px rgba(191, 196, 201, 0.2), 0 3px 4px rgba(191, 196, 201, 0.18), 0 1px 5px rgba(191, 196, 201, 0.24);
+    border-radius: 10px;
+    margin-left: 4px;
+
+    padding: 8px;
+
+    display: flex;
+    cursor: pointer;
+    &_wrapper{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .book_cover{
+            display: flex;
+            justify-content: center;
+            height: 242px;
+            border-radius: 10px;
+        }
+        .book_wrapper_1{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+            .book_name{
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 18px;
+                letter-spacing: 0.1px;
+
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+
+            .book_author{
+                margin-top: 8px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                letter-spacing: 0.1px;
+                color: #727272;
+            }
+        }
+        .book_button{
+
+            &__free{
+                color: #FFFFFF;
+                border: 1px solid #BFC4C9;
+                background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+                padding: 11px 23px;
+                margin: 28px 0 8px;
+                border-radius: 20px;
+                cursor: pointer;
+                width: 100%;
+
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.2px;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            &_busy{
+                color: #A7A7A7;
+                border: 1px solid #BFC4C9;
+                background: #F9F9FA;
+                padding: 11px 23px;
+                margin: 28px 0 8px;
+                border-radius: 20px;
+
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 0.2px;
+                text-transform: uppercase;
+                text-align: center;
+
+                &_you{
+                    color: #363636;
+                    border: 1px solid #BFC4C9;
+                    background: #F9F9FA;
+                    padding: 11px 23px;
+                    margin: 28px 0 8px;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    width: 100%;
+
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 18px;
+                    letter-spacing: 0.2px;
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 1133px) {
+    .book{
+        padding: 16px;
+    }
+}

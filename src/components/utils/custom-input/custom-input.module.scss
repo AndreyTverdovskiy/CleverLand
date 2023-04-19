@@ -1,0 +1,75 @@
+.custom_field {
+    position: relative;
+    width: 100%;
+    background-color: #FFFFFF;
+
+    &_input {
+        width: 100%;
+        padding: 1.5rem 1rem 0.5rem;
+        font-size: 14px;
+        background-color: #F9F9FA;
+        border: none;
+        outline: none;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+
+        border-bottom: 1px solid #BFC4C9;
+        &_error {
+            border-bottom: 1px solid #fa0000;
+        }
+
+        &::placeholder {
+            color: transparent;
+        }
+
+        &:placeholder-shown + .custom_field_label::before {
+            font-weight: 400;
+            transform: translate3d(0, -34px, 0) scale3d(1, 1, 1);
+        }
+    }
+
+
+    &_label {
+        display: block;
+        position: relative;
+        max-height: 0;
+        font-weight: 500;
+        pointer-events: none;
+
+        &::before {
+            color: #363636FF;
+            content: attr(data-content);
+            display: inline-block;
+            transform-origin: left top;
+            transition: transform 0.2s ease;
+            left: 12px;
+            position: relative;
+        }
+    }
+
+    &_message {
+        padding-left: 5px;
+        color: #A7A7A7FF;
+
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0.2px;
+    }
+}
+
+.custom_field_label::before,
+.custom_field_input:focus + .custom_field_label::before {
+    transform: translate3d(0, -50px, 0) scale3d(0.85, 0.85, 0.85);
+}
+
+.custom_field_input:focus + .custom_field_label::before {
+    color: #BFC4C9FF;
+}
+
+.custom_field_label_hidden {
+    display: none;
+}
+
+
+

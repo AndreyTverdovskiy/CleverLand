@@ -1,0 +1,172 @@
+.profile_data{
+    &_form {
+        margin-top: 32px;
+
+        .inputs_block {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 30px;
+
+            .inputContainer {
+                .labelContainer {
+                    position: relative;
+                    flex-basis: 50%;
+
+                    .inputCommon {
+                        position: relative;
+                        width: 100%;
+                        cursor: pointer;
+                        height: 56px;
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #363636;
+                        line-height: 18px;
+                        background: #F9F9FA;
+                        border: none;
+                        border-bottom: 1px solid #BFC4C9;
+                        padding-left: 12px;
+                        z-index: 2;
+                        outline: none;
+
+                        &:focus {
+                            z-index: 0;
+                        }
+
+                        &:focus::placeholder {
+                            color: transparent;
+                        }
+                    }
+
+                    .inputCommonError {
+                        border-bottom: 1px solid #FF5253;
+                    }
+
+                    .labelFocus {
+
+                        font-size: 12px;
+                        font-weight: 500;
+                        color: #A7A7A7;
+
+                        line-height: 16px;
+                        letter-spacing: 0.2px;
+                        position: absolute;
+                        top: 50%;
+                        background-color: transparent;
+                        transform: translateY(-26px);
+                        padding-left: 12px;
+                        z-index: 1;
+                    }
+
+                    .label {
+                        z-index: 3;
+                    }
+
+                    .eyeStyles {
+                        cursor: pointer;
+                        padding: 0;
+                        border: none;
+                        color: inherit;
+                        background-color: transparent;
+                        position: absolute;
+                        bottom: 17px;
+                        right: 16px;
+                        z-index: 4;
+                    }
+
+                    .successPassword {
+                        position: absolute;
+                        bottom: 17px;
+                        right: 40px;
+                        z-index: 4;
+                    }
+                }
+
+                .emptyDiv {
+                    height: 20px;
+                }
+
+                .helper {
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: #A7A7A7;
+                    line-height: 16px;
+                    letter-spacing: 0.2px;
+                    margin: 0 0 16px 12px;
+                }
+
+                .red {
+                    color: rgb(244, 44, 79)
+                }
+
+                .helperError {
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 16px;
+                    letter-spacing: 0.2px;
+                    margin: 0 0 16px 12px;
+                    color: rgb(244, 44, 79)
+                }
+            }
+        }
+
+        .button_block {
+            margin-top: 52px;
+
+            .button {
+                border-radius: 30px;
+                text-transform: uppercase;
+                text-align: center;
+                padding-top: 14px;
+                padding-bottom: 14px;
+                min-width: 255px;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 150%;
+                letter-spacing: 0.2px;
+                cursor: pointer;
+
+            }
+
+            .edit {
+                margin-right: 30px;
+                background-color: rgba(0, 0, 0, 0);
+                color: #363636;
+                border: 1px solid #BFC4C9;
+            }
+
+            .submit_dis{
+                background: #EBEBEB;
+                color: #FFFFFF;
+                border: none; text-transform: uppercase;
+            }
+
+            .submit_act{
+                color: #FFFFFF;
+                border: none;
+                background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 660px)  {
+    .profile_data{
+        &_form {
+            margin-top: 32px;
+            .inputs_block {
+                grid-template-columns: 1fr;
+            }
+            .button_block {
+                .button {
+                    width: 100%;
+                }
+                .edit {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+}
+
