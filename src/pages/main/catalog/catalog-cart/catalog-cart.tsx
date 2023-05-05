@@ -67,7 +67,7 @@ export function CatalogCart({book, category, searchValue, toggleBooking,setBookI
             <div className={s.book_wrapper}>
                 <div className={s.book_cover}>
                     <img
-                        src={book.image ? `${baseURL}${book.image.url}` : default_image}
+                        src={book.image ? `${book.image.url}` : default_image}
                         alt='book'/>
                 </div>
 

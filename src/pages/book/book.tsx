@@ -184,7 +184,7 @@ export const Book = ({toggleBooking, setBookId, setBookingId, setDateOrder}: Boo
                                     bookInfo.images !== null && bookInfo.images !== undefined && bookInfo.images.length > 2
                                         ? <BookSwiper images={bookInfo.images}/>
                                         : <img
-                                            src={bookInfo.images !== null && bookInfo.images !== undefined && bookInfo.images.length === 1 ? `${baseURL}${bookInfo.images[0].url}` : default_image}
+                                            src={bookInfo.images !== null && bookInfo.images !== undefined && bookInfo.images.length === 1 ? `${bookInfo.images[0].url}` : default_image}
                                             alt='img'/>
                                 }
                             </div>

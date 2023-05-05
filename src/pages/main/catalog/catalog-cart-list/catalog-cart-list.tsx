@@ -66,7 +66,7 @@ export function CatalogCartList({
         >
             <div className={s.book_wrapper}>
                 <div className={s.book_cover}>
-                    <img src={book.image ? `${baseURL}${book.image.url}` : default_image} alt='book'/>
+                    <img src={book.image ? `${book.image.url}` : default_image} alt='book'/>
                 </div>
 
                 <div className={s.book_description}>
