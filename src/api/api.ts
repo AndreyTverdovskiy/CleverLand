@@ -5,7 +5,7 @@ import {FormDataType} from '../components/utils/custom-input/custom-input.types'
 import {Endpoints} from './endpoints';
 
 
-export const baseURL = 'https://strapi.cleverland.by'
+export const baseURL = 'https://library-cleverland-2jfze.ondigitalocean.app'
 
 export const instance = axios.create({
     baseURL,
